@@ -16,8 +16,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull
-    private double usdt;
 
     @Size(max = 50)
     @NotBlank
@@ -45,17 +43,7 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
-        usdt = 2000;
     }
-
-    public double getUsdt() {
-        return usdt;
-    }
-
-    public void setUsdt(double usdt) {
-        this.usdt = usdt;
-    }
-
 
     public Long getId() {
         return id;
