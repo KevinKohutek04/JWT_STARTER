@@ -7,7 +7,7 @@ to the SQL server's IP and port. Then, update spring.datasource.username= and sp
 Next, under Biscuit_corpo.app.jwtSecret=, add a JWT secret. It must be 256 bits long and contain no special characters.
 
 Then, test run to see if you're connected. Once you've connected successfully, Spring Boot will generate your tables in the database.
-All you have to do is manually add this in.
+All you have to do is manually add this into the roles table.
 
 ![image](https://github.com/KevinKohutek04/JWT_STARTER/assets/144548080/3747dbde-d243-499e-9cca-cfb7d189b969)
 
