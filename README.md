@@ -22,33 +22,3 @@ To log in, you do this, and you'll receive back this information.
 
 The Jwt Bearer is what you will use as your key when you send the information back the the api point
 
-Here is a example:
-
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    //console.log(username + " " + password +"  "  + JSON.stringify({ username: username, password: password }))
-    fetch('/api/auth/signin', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username: username, password: password })
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error('Login failed');
-        }
-    })
-    .then(data => {
-        localStorage.setItem('token', data.token);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
-
-So when you want to call this api point now all you do is send the token from localStorage as a header.
