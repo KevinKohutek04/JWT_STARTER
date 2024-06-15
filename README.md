@@ -19,3 +19,5 @@ Open up Postman, then send a POST request to signup like this.
 To log in, you do this, and you'll receive back this information.
 
 ![image](https://github.com/KevinKohutek04/JWT_STARTER/assets/144548080/04e42127-c8a2-48f1-bff8-d79abf41d9ae)
+
+The Jwt Bearer is what you will use as your key when you send the information back the the api point
